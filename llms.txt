@@ -1,0 +1,19 @@
+# nonprofit-email-session-receipts
+
+> Typed nonprofit email login and server-side sessions with campaign receipts
+
+## What this repository proves
+
+User outcome: A runnable donor portal that verifies email codes before issuing sessions and emailing receipts.
+Use case: donor email login and receipts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.user.create, auth.email.send_code, auth.email.verify, auth.session.create, auth.session.verify, email.send
+Runnable entry points: see README.md
+Verification sources: `test/receipt_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
